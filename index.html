@@ -7,10 +7,15 @@
 
 <body>
   <div id="app">
-    <div class="container">
+    <div>
       <input type="text" name="principal" class="currency" v-model.number="principal" placeholder="Loan Amount">
+    </div>
+    <div>
       <input type="text" name="length" class="currency" v-model.number="length" placeholder="Length In Months">
+    </div>
+    <div>
       <input type="text" name="apr" v-model.number="apr" placeholder="APR">
+      </div>
     <div class="payment">{{ calculateAmount }} / month</div>
   </div>
 
