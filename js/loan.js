@@ -1,9 +1,9 @@
 var app = new Vue({
   el: '#app',
   data: {
-    principal: '8000',
-    length: '60',
-    apr: '4.5'
+    principal: '',
+    length: '',
+    apr: ''
   },
   computed: {
     calculateAmount: function(){
