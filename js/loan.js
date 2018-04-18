@@ -1,13 +1,12 @@
 var app = new Vue({
   el: '#app',
   data: {
-    principal: '',
-    length: '',
-    apr: '',
-    calculateAmount: ''
+    principal: '8000',
+    length: '60',
+    apr: '4.5'
   },
   computed: {
-    calculateAmount: function(e){
+    calculateAmount: function(){
       var principal = this.principal;
       var apr = this.apr / 1200.0;
       var length = this.length;
@@ -15,13 +14,11 @@ var app = new Vue({
       var payment = ( principal * apr * i) / (i - 1) || 0;
       return currencyFormat(payment);
     },
-    
   }
-  
 });
 
 
 //https://blog.tompawlak.org/number-currency-formatting-javascript
-function currencyFormat (num) {
-    return "$" + num.toFixed(2)
+function currencyFormat (number) {
+    return "$" + number.toFixed(2)
 }
